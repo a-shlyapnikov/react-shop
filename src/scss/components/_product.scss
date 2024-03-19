@@ -1,0 +1,167 @@
+.carousel-wrapper {
+    background-color: #F7F7F7;
+    position: relative;
+    z-index: 0;
+    padding-top: 11px;
+    padding-bottom: 42px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: auto;
+}
+
+.carousel-item img {
+
+    margin: 0 auto;
+}
+
+.svg-btn {
+    padding: 8px;
+    background-color: #2A2A2A26;
+}
+
+.svg-btn:hover svg path {
+    fill: $colorSpecial;
+}
+
+
+.page-heading {
+    background-color: #F8F3F4;
+    @include flex-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__title {
+        @include font-property(24px, 400, $colorSpecial);
+    }
+
+}
+
+.breadcrumbs {
+
+    &__ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    &__ul li:not(:last-child)::after {
+        content: '/';
+        padding-left: 8px;
+        padding-right: 8px;
+        @include font-property(14px, 300, #636363);
+    }
+
+
+    &__link {
+        @include font-property(14px, 300, #636363);
+
+    }
+
+
+
+    &__ul li:last-child .breadcrumbs__link {
+        @include font-property(14px, 700, $colorSpecial);
+    }
+}
+
+
+
+
+
+.product-info {
+    margin-bottom: 128px;
+}
+
+.product-description {
+    margin-top: -66px;
+    background-color: $bgLight;
+    position: relative;
+    z-index: 1;
+
+    @include flex-column-center;
+    padding-top: 64px;
+    padding-bottom: 65px;
+    border: 1px $borderColor solid;
+    margin-bottom: 121px;
+
+    &__subtitle {
+        @include font-property(14px, 300, $colorSpecial);
+        position: relative;
+        padding-bottom: 28px;
+    }
+
+    &__subtitle::after {
+        position: absolute;
+        top: 29px;
+        left: 41px;
+        content: '';
+        background-color: $colorSpecial;
+        width: 63px;
+        height: 3px;
+    }
+
+    &__title {
+        @include font-property(18px, 300, #4D4D4D);
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        @include font-property(14px, 300, #5E5E5E);
+        text-align: center;
+        max-width: 555px;
+        margin-bottom: 32px;
+    }
+
+    &__price {
+        @include font-property(24px, 300, $colorSpecial);
+        position: relative;
+        padding-bottom: 130px;
+    }
+
+    &__price::after {
+        position: absolute;
+        content: '';
+        background-color: $borderColor;
+        width: 641px;
+        height: 1px;
+        top: 89px;
+        left: -280px;
+    }
+
+
+    &__options {
+        @include flex-center(23px);
+        margin-bottom: 48px;
+    }
+
+    &__summary {
+        @include flex-center(9px);
+        @include font-property(14px, 400, $colorFontGrey);
+        background-color: #fff;
+
+    }
+
+
+    &__add-link {
+        border: $colorSpecial 1px solid;
+        @include flex-center(23px);
+        color: $colorSpecial;
+        transition: background-color 0.3s, color 0.3s;
+
+    }
+
+    &__add-link:hover {
+        background-color: $colorSpecial;
+        color: #fff;
+
+
+    }
+
+    &__add-link:hover svg path {
+        fill: #fff;
+    }
+}

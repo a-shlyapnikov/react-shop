@@ -1,0 +1,124 @@
+.header {
+    @include flex-between;
+    background-color: $bgHeader;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    position: relative;
+
+    &__left {
+        @include flex-center(41px);
+        align-items: flex-end;
+    }
+
+    &__right {
+        @include flex-center(33px);
+    }
+
+    &__link {
+        position: relative;
+				cursor: pointer;
+    }
+
+    &__link:hover svg path {
+        fill: $colorSpecial;
+    }
+
+
+
+    // &__basket::after {
+    //     @include flex-column-center;
+    //     position: absolute;
+    //     top: -7px;
+    //     left: 22px;
+    //     content: '5';
+    //     width: 19px;
+    //     height: 19px;
+    //     background-color: $colorSpecial;
+    //     border-radius: 50%;
+    //     font-size: 12px;
+    //     color: #fff;
+    // }
+		&__cart-counter{
+			@include flex-column-center;
+        position: absolute;
+        top: -7px;
+        left: 22px;
+        content: '5';
+        width: 19px;
+        height: 19px;
+        background-color: $colorSpecial;
+        border-radius: 50%;
+        font-size: 12px;
+        color: #fff;
+		}
+
+    &__checkbox {
+        position: absolute;
+        visibility: hidden;
+        left: -9999999px;
+    }
+
+    // &__checkbox:checked~.menu {
+    //     right: 0;
+    // }
+}
+
+.menu {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 100;
+    width: $menuWidth;
+    background: #FFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 32px;
+    transition: right 0.6s;
+
+    &__checkbox {
+        position: absolute;
+        visibility: hidden;
+        left: -9999999px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 16px;
+        right: 17px;
+    }
+
+    &__close:hover svg path {
+        fill: $colorSpecial;
+    }
+
+    &__heading {
+        @include font-property(14px, 700, $colorFontDark);
+        margin-bottom: 24px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__title {
+        @include font-property($color: $colorSpecial);
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    &__list {
+        padding-left: 21px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    &__link {
+        @include font-property($color: #6F6E6E);
+    }
+
+    &__link:hover {
+        color: $colorSpecial;
+    }
+}

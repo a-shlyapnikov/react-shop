@@ -1,0 +1,141 @@
+@media (max-width: 1024px) {
+    $widthContent: 736px;
+
+    // index
+    .center {
+        padding-left: calc(50% - $widthContent/2);
+        padding-right: calc(50% - $widthContent/2);
+    }
+
+    .promo {
+        gap: 40px;
+
+        &__title {
+            @include font-property(44px, 900, $promoFontColor);
+        }
+
+        &__subtitle {
+            @include font-property(24px, 700, $promoFontColor);
+
+        }
+    }
+    .sale{
+        gap: 20px;
+    }
+
+    .product-box__content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .feature {
+        @include flex-column-center;
+        padding-top: 48px;
+        padding-bottom: 64px;
+        gap: 48px;
+    }
+
+    .subscribe-content {
+        @include flex-column-center;
+        gap: 60px;
+        padding-top: 64px;
+        padding-bottom: 140px;
+
+        &__subtitle {
+            margin-bottom: 27px;
+        }
+    }
+
+
+    //catalog
+    .filter-sort {
+        padding-top: 24px;
+        padding-bottom: 40px;
+        gap: 0;
+    }
+
+    .filter__summary {
+        min-width: 360px;
+    }
+
+    .sort {
+        grid-column: 4;
+
+    }
+
+    .product-3 {
+        display: none;
+    }
+
+    .pagination {
+        margin-top: 40px;
+        margin-bottom: 64px;
+    }
+
+    //product
+    .carousel-wrapper {
+        padding-top: 29px;
+        padding-bottom: 29px;
+    }
+    
+
+    .product-info {
+        padding: 0;
+        width: 100vw;
+    }
+
+    .product-description {
+        margin-top: 0;
+    }
+
+    //cart
+    .shopping-cart {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: flex-start;
+        }
+    }
+
+    .shipping {
+        flex-basis: 50%;
+        margin-bottom: 0;
+        &__title {
+            margin-top: 0;
+        }
+    }
+
+    .checkout {
+        margin-top: 40px;
+    }
+
+    //registration
+    .registration {
+        grid-template-columns: repeat(2, 2fr);
+        gap: 22px;
+
+        &-right {
+            grid-column: span 1;
+        }
+
+        &__heading {
+            font-size: 16px;
+        }
+
+        &__desc {
+            font-size: 16px;
+
+        }
+
+        &__list li {
+            font-size: 16px;
+
+        }
+
+    }
+}

@@ -1,0 +1,111 @@
+.footer {
+	background-color: $bgDark;
+}
+
+.subscribe {
+	background: url(img/footer/subscribe-img.png);
+	background-position: 25% 75%;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.subscribe-content {
+	@include flex-between;
+	padding-top: 97px;
+	padding-bottom: 126px;
+
+	&__left {
+		@include flex-column-center;
+		gap: 30px;
+		text-align: center;
+	}
+
+	&__right {
+		@include flex-column-center;
+	}
+
+	&__text {
+		@include font-property(20px);
+		max-width: 360px;
+	}
+
+	&__title {
+		@include font-property(24px, 700, $line-height: 167.2%);
+	}
+
+	&__subtitle {
+		@include font-property(18px, 400, $line-height: 167.2%);
+		text-align: center;
+		margin-bottom: 39px;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: center;
+		min-height: 49px;
+		background-color: $bgForm;
+		padding-left: 20px;
+		border-radius: 20px;
+
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+
+	&__form input {
+		background-color: $bgForm;
+	}
+
+	&__form input::placeholder {
+		padding: 7px 0;
+		font-size: 14px;
+		line-height: normal;
+		opacity: 0.671;
+	}
+
+	&__btn {
+		@include font-property($color: #fff);
+		min-width: 100px;
+		margin-left: 20px;
+		background-color: #e05c6e;
+		min-height: 49px;
+		text-align: center;
+		padding: 8px 7px;
+		border-radius: 0px 20px 20px 0px;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0px 0px 2px 1px #e05c6e;
+		}
+	}
+}
+
+.footer-bottom {
+	@include flex-between;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	&__copyright {
+		@include font-property(16px, $color: $lightFontColor);
+	}
+
+	&__social {
+		@include flex-between;
+		gap: 8px;
+	}
+
+	&__link {
+		@include flex-column-center;
+		width: 32px;
+		height: 32px;
+		background-color: #fff;
+		transition: all 0.3s;
+	}
+	&__link:hover {
+		background-color: #f16d7f;
+	}
+	&__link:hover svg path {
+		fill: #fff;
+	}
+}

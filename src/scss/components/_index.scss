@@ -1,0 +1,206 @@
+.promo {
+    background-color: #F1E4E6;
+    display: flex;
+    align-items: center;
+    gap: 63px;
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
+
+    &__img {
+        display: flex;
+        max-width: 50%;
+    }
+
+    &__content {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__title {
+        @include font-property(48px, 900, $promoFontColor);
+    }
+
+    &__subtitle {
+        @include font-property(32px, 700, $promoFontColor);
+    }
+
+    &__content::before {
+        display: inline-block;
+        content: '';
+        width: 12px;
+        height: 92px;
+        background-color: $colorSpecial;
+    }
+}
+
+
+.sale {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 56px;
+    padding-bottom: 96px;
+    gap: 30px;
+
+    &__item {
+        position: relative;
+    }
+
+    &__item img {
+        height: 100%;
+    }
+
+    &__content {
+        @include flex-column-center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(33, 22, 22, 0.70);
+    }
+
+    &__item-big {
+        grid-column: span 3;
+    }
+
+    &__subtitle {
+        @include font-property(16px, 400, #fff);
+
+    }
+
+    &__title {
+        @include font-property(24px, 700, $colorSpecial);
+    }
+
+    &__item:hover {
+        transform: scale(1.02);
+    }
+
+    &__item:hover &__content {
+        background: rgba(33, 22, 22, 0.40);
+    }
+}
+
+.product-box {
+
+    &__heading {
+        @include font-property(30px, $color: #222);
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    &__text {
+        @include font-property(14px, $color: #9F9F9F);
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 25px;
+        column-gap: 30px;
+    }
+
+    &__browse-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+        margin-bottom: 95px;
+
+    }
+
+    &__browse-link {
+        position: relative;
+        color: $colorSpecial;
+        background-color: #fff;
+        border: $colorSpecial 1px solid;
+        transition: all 0.3s;
+    }
+
+    &__browse-link:hover {
+        background-color: #F16D7F;
+        color: #fff;
+        border: $colorSpecial 1px solid;
+    }
+}
+
+.product {
+    position: relative;
+
+    &:hover .product__add {
+        display: flex;
+    }
+
+    &:hover .product__img {
+        filter: brightness(0.5);
+    }
+
+    &__content {
+        background-color: #F8F8F8;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 16px;
+    }
+
+    &__title {
+        @include font-property(13px);
+    }
+
+    &__text {
+        @include font-property(14px, 300,#5D5D5D);
+    }
+
+    &__price {
+        @include font-property(16px, 400, $colorSpecial);
+    }
+
+    &__add {
+        position: absolute;
+        top: 188px;
+        display: none;
+        left: 111px;
+        border: 1px solid #fff;
+        min-width: 139px;
+        min-height: 44px;
+        font-size: 14px;
+        line-height: 17px;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+        color: #fff;
+
+        &:hover {
+            box-shadow: 0 0 5px #fff;
+        }
+
+        &:hover svg path {
+            fill: $colorSpecial;
+        }
+    }
+}
+
+.feature {
+    @include flex-between;
+    background-color: $bgDark;
+    padding-top: 104px;
+    padding-bottom: 104px;
+    gap: 30px;
+
+    &__item {
+        @include flex-column-center;
+        justify-content: space-between;
+        min-height: 134px;
+    }
+
+    &__heading {
+        @include font-property(20px, $color:$lightFontColor );
+    }
+
+    &__text {
+        @include font-property(14px, 300, $lightFontColor);
+        text-align: center;
+        max-width: 360px;
+    }
+}

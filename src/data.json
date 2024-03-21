@@ -1,0 +1,56 @@
+[
+	{
+		"id": "0",
+		"title": "ELLERY XM'O CAPSULE",
+		"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter f cool Kym Ellery teams upwith Moda Operandi.",
+		"price": "120",
+		"img": "img/index/product-box/item1.png",
+		"color": "Dark-blue",
+		"size": "L"
+	},
+	{
+		"id": "1",
+		"title": "ELLERY XM'O CAPSULE",
+		"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter f cool Kym Ellery teams upwith Moda Operandi.",
+		"price": "50",
+		"img": "img/index/product-box/item2.png",
+		"color": "Black",
+		"size": "s"
+	},
+	{
+		"id": "2",
+		"title": "ELLERY XM'O CAPSULE",
+		"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter f cool Kym Ellery teams upwith Moda Operandi.",
+		"price": "39",
+		"img": "img/index/product-box/item3.png",
+		"color": "White",
+		"size": "L"
+	},
+	{
+		"id": "3",
+		"title": "ELLERY XM'O CAPSULE",
+		"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter f cool Kym Ellery teams upwith Moda Operandi.",
+		"price": "14",
+		"img": "img/index/product-box/item4.png",
+		"color": "Yellow",
+		"size": "M"
+	},
+	{
+		"id": "4",
+		"title": "ELLERY XM'O CAPSULE",
+		"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter f cool Kym Ellery teams upwith Moda Operandi.",
+		"price": "20",
+		"img": "img/index/product-box/item5.png",
+		"color": "Aqua",
+		"size": "M"
+	},
+	{
+		"id": "5",
+		"title": "ELLERY XM'O CAPSULE",
+		"description": "Known for her sculptural takes on traditional tailoring, Australian arbiter f cool Kym Ellery teams upwith Moda Operandi.",
+		"price": "87",
+		"img": "img/index/product-box/item6.png",
+		"color": "Green",
+		"size": "S"
+	}
+]

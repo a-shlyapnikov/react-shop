@@ -1,4 +1,29 @@
-export default function Product({ title, description, price, img }) {
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/Slices/cartSlice';
+
+export default function Product({
+	id,
+	title,
+	description,
+	price,
+	img,
+	color,
+	size
+}) {
+	const dispatch = useDispatch();
+	const onClicAdd = () => {
+		const item = {
+			id,
+			title,
+			description,
+			price,
+			img,
+			color,
+			size
+		};
+		dispatch(addToCart(item));
+	};
+
 	return (
 		<div className='product'>
 			<img className='product__img' src={img} alt='product image' />
@@ -7,7 +32,7 @@ export default function Product({ title, description, price, img }) {
 				<p className='product__text'>{description}</p>
 				<h4 className='product__price'>${price}</h4>
 			</div>
-			<button className='product__add'>
+			<button onClick={onClicAdd} className='product__add'>
 				<svg
 					width='27'
 					height='25'

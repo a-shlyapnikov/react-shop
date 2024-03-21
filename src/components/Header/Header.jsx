@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import BurgerMenu from './BurgerMenu';
 
 export default function Header() {
 	const [open, setOpen] = useState(false);
+	const items = useSelector((state) => state.cart.items);
 	
+
 	return (
 		<header className='header center'>
 			<div className='header__left'>
@@ -72,7 +75,7 @@ export default function Header() {
 							fill='#E8E8E8'
 						/>
 					</svg>
-					<span className='header__cart-counter'>0</span>
+					<span className='header__cart-counter'>{items.length}</span>
 				</Link>
 			</nav>
 
